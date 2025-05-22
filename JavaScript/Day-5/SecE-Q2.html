@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Palindrome Checker</title>
+  <script>
+    function checkPalindrome() {
+      var str = prompt("Enter a string to check if it's a palindrome:");
+      
+      // Convert to lowercase and remove spaces (optional, for flexible input)
+      var original = str.toLowerCase();
+      var reversed = original.split("").reverse().join("");
+
+      if (original === reversed) {
+        document.write(str + " is a Palindrome");
+      } else {
+        document.write(str + " is NOT a Palindrome");
+      }
+    }
+
+    checkPalindrome(); // call the function
+  </script>
+</head>
+<body>
+</body>
+</html>

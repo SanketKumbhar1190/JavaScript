@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Even Numbers</title>
+  <script>
+    function printEvenNumbers() {
+      var limit = parseInt(prompt("Enter the limit up to which you want even numbers:"));
+      var result = "<h3>Even Numbers:</h3>";
+
+      if (isNaN(limit) || limit < 1) {
+        document.write("Please enter a valid positive number.");
+        return;
+      }
+
+      for (var i = 1; i <= limit; i++) {
+        if (i % 2 === 0) {
+          result += i + "<br>";
+        }
+      }
+
+      document.write(result);
+    }
+
+    printEvenNumbers(); // call the function
+  </script>
+</head>
+<body>
+</body>
+</html>

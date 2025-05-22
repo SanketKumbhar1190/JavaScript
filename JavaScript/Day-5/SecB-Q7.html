@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiplication Table</title>
+    <script>
+        function table() {
+            var num = parseInt(prompt("Enter number:"));
+            var range = parseInt(prompt("Enter range:"));
+            var output = "<h3>Multiplication Table of " + num + "</h3>";
+            output += "<table border='1'><tr><th>Expression</th><th>Result</th></tr>";
+
+            if (isNaN(num) || isNaN(range)) {
+                output = "Please enter valid numbers.";
+            } else {
+                for (var i = 1; i <= range; i++) {
+                    output += `<tr>
+                                <td>${num} x ${i}</td>
+                                <td>${num * i}</td>
+                            </tr>`;
+                }
+                output += "</table>";
+            }
+
+            document.write(output);
+        }
+
+        table(); // Call the function immediately
+    </script>
+</head>
+<body>
+
+</body>
+</html>

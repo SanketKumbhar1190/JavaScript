@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movie Details</title>
+    <script>
+        // Declare an array to store 3 movie objects
+        var movies = [];
+
+        // Take input using prompt and store in object
+        for (var i = 0; i < 3; i++) {
+            var movie = {
+                name: prompt("Enter Movie Name:"),
+                price: prompt("Enter Ticket Price:"),
+                seat: prompt("Enter Seat Number:")
+            };
+            movies.push(movie);
+        }
+
+        // Display in table format using document.write()
+        var tableHTML = "<h2>Movie Details</h2>";
+        tableHTML += "<table border='1'><tr><th>Movie Name</th><th>Price</th><th>Seat</th></tr>";
+
+        for (var i = 0; i < movies.length; i++) {
+            tableHTML += `<tr>
+                            <td>${movies[i].name}</td>
+                            <td>${movies[i].price}</td>
+                            <td>${movies[i].seat}</td>
+                          </tr>`;
+        }
+
+        tableHTML += "</table>";
+
+        document.write(tableHTML);
+    </script>
+</head>
+<body>
+</body>
+</html>
